@@ -2873,8 +2873,10 @@ input, select, textarea {
 
 		.publication .imagerow {
 			display: grid;
+			padding: 1%;
 			grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 			grid-gap: 5%;
+			align-items: center;
 		}
 
 			.publication .imagerow img {

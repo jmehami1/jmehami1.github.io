@@ -140,9 +140,49 @@
 				<!-- <img src="http://127.0.0.1:5500/images/publications/line_scan_calibration/active_simulation_abs_error_norm.png" alt="TEST" /> -->
 
 				<div class="publication">
+					<h2><a href="http://hdl.handle.net/10453/164273" target="_blank">Subcutaneous Fat Depth Regression
+							Using Hyperspectral and
+							Depth Imaging</a></h2>
+					<p style="text-align: left;">
+						This paper uses a calibrated line-scan hyperspectral and frame camera system with a calibrated
+						light source to model the subcutaneous fat depth of lamb cut samples using machine learning. The
+						ground-truth fat depth is acquired from ray-casting into CT scans of the lamb cut samples. These
+						CT scans are first converted into 3D meshes, which then are aligned to a 3D reconstructed mesh
+						from depth images. Finally, the fat depth is acquired through ray-casting hyperspectral pixels.
+						Fat depth models are trained using classic and deep learning models, where the deep learning
+						models show the best results.
+					</p>
+					<!-- <h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
+							target="_blank"><strong>GitHub</strong></a></h3> -->
+					<div class="imagerow" id="subcutaneous_fat_depth_regression"></div>
+				</div>
+
+				<div class="publication">
+					<h2><a href="https://doi.org/10.1109/LRA.2022.3192208" target="_blank">Multi-Modal Non-Isotropic
+							Light Source Modelling for Reflectance Estimation in Hyperspectral Imaging</a></h2>
+					<p style="text-align: left;">
+						This paper improves the estimation of the material property of reflectance for an object of
+						interest that is captured using a calibrated line-scan hyperspectral and frame camera system,
+						by modeling a light source and incorporating shape information.
+						The reflected light from the object of interest is assumed to be described by the dichromatic
+						reflectance model. The cameras, light source and objects are all near-field
+						where the incident irradiance varies over the object's surface. The light source modeling uses a
+						Gaussian Process with a non-zero mean function to capture the spatial irradiance
+						of an actual light source. The proposed reflectance estimation involves optimization that uses
+						the irradiance estimated from the Gaussian Process model with additional terms that
+						involve the surface shape.
+					</p>
+					<h3><a href="https://github.com/jmehami1/MMHS-RE" target="_blank"><strong>GitHub</strong></a></h3>
+
+					<div class="imagerow" id="multi_modal_non-isotropic_light_source"></div>
+					<div class="imagerow" id="multi_modal_non-isotropic_reflectance"></div>
+
+				</div>
+
+				<div class="publication">
 					<h2><a href="https://doi.org/10.1109/MFI49285.2020.9235226" target="_blank">Observability driven
 							multi-modal line-scan camera calibration</a></h2>
-					<p style="text-align: left;" >
+					<p style="text-align: left;">
 						This paper improves the calibration of a line-scan camera through a novel active calibration
 						algorithm. The line-scan camera is combined with a 2D traditional frame camera (color or RGB
 						camera). The active calibration algorithm filters through the calibration dataset and only uses
@@ -151,24 +191,6 @@
 					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3>
 					<div class="imagerow" id="line_scan_calibration"></div>
-				</div>
-
-				<div class="publication">
-					<h2><a href="https://doi.org/10.1109/LRA.2022.3192208" target="_blank">Multi-Modal Non-Isotropic
-							Light Source Modelling for Reflectance Estimation in Hyperspectral Imaging</a></h2>
-					<p style="text-align: left;" >
-						This paper improves the estimation of the material property of reflectance from hyperspectral imaging by modeling a light source and incorporating shape information. 
-						The reflected light from the object of interest is assumed to be described by the dichromatic reflectance model. The cameras, light source and objects are all near-field 
-						where the incident irradiance varies over the object's surface. The light source modeling uses a Gaussian Process with a non-zero mean function to capture the spatial irradiance 
-						of an actual light source. The proposed reflectance estimation involves optimization that uses the irradiance estimated from the Gaussian Process model with additional terms that 
-						involve the surface shape.
-					</p>
-					<h3><a href="https://github.com/jmehami1/MMHS-RE"
-						target="_blank"><strong>GitHub</strong></a></h3>
-
-					<div class="imagerow" id="multi_modal_non-isotropic_light_source"></div>
-					<div class="imagerow" id="multi_modal_non-isotropic_reflectance"></div>
-					
 				</div>
 
 				<script>
@@ -205,7 +227,7 @@
 					displayImagesFromFolderInRow("line_scan_calibration");
 					displayImagesFromFolderInRow("multi_modal_non-isotropic_light_source");
 					displayImagesFromFolderInRow("multi_modal_non-isotropic_reflectance");
-
+					displayImagesFromFolderInRow("subcutaneous_fat_depth_regression");
 
 				</script>
 
