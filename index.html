@@ -139,10 +139,6 @@
 
 				<!-- <img src="http://127.0.0.1:5500/images/publications/line_scan_calibration/active_simulation_abs_error_norm.png" alt="TEST" /> -->
 
-				<!-- <div class="publication">
-						<img src="http://127.0.0.1:5500/images/publications/line_scan_calibration/active_simulation_abs_error_norm.png" alt="TEST" />
-					</div> -->
-
 				<div class="publication">
 					<h2><a href="https://doi.org/10.1109/MFI49285.2020.9235226" target="_blank">Observability driven
 							multi-modal line-scan camera calibration</a></h2>
@@ -154,8 +150,6 @@
 					</p>
 					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3>
-
-					<!-- <p><strong>GitHub: </strong>https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration</p> -->
 					<div class="imagerow" id="line_scan_calibration"></div>
 				</div>
 
@@ -168,34 +162,17 @@
 						camera). The active calibration algorithm filters through the calibration dataset and only uses
 						images that improve parameter estimation through calculation of the observability.
 					</p>
-					<!-- <h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration" target="_blank"><strong>GitHub</strong></a></h3> -->
+					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
+						target="_blank"><strong>GitHub</strong></a></h3>
 
-					<!-- <p><strong>GitHub: </strong>https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration</p> -->
 					<div class="imagerow" id="multi_modal_non-isotropic_light_source"></div>
 				</div>
 
-				<!-- <h2>Publications</h2>
-
-					<div class="publication" id="multi_modal_non-isotropic_light_source"></div> -->
-
-				<!-- <img src="https://raw.githubusercontent.com/jmehami1/jmehami1.github.io/main/images/publications/line_scan_calibration/Multi_pose_common_frame.png"
-					alt="TEST" /> -->
-
-
 				<script>
 					function displayImagesFromFolderInRow(containerId) {
+						// This function will load all images that are contained in a local file and add them as image attributes to the publication container.
 						var container = document.getElementById(containerId);
-						// var folderPath = "/images/publications/" + container.id;
 						var folderPath = "https://api.github.com/repos/jmehami1/jmehami1.github.io/contents/images/publications/" + container.id;
-
-
-
-						// console.log(folderPath);
-
-
-						// var fs = require('fs');
-						// var files = fs.readdirSync(folderPath);
-						// console.log(files);
 
 						function isImageFile(fileName) {
 							const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
@@ -207,16 +184,10 @@
 						(async () => {
 							const response = await fetch(folderPath);
 							const data = await response.json();
-
-							// console.log(data);
-
-
 							data.forEach(function (fileElement) {
-								
+
 								var filePath = fileElement.path;
 								var fileDownloadUrl = fileElement.download_url;
-								// console.log(filePath);
-								// console.log(fileDownloadUrl);
 
 								if (isImageFile(filePath)) {
 									var img = new Image();
@@ -225,56 +196,13 @@
 									container.appendChild(img);
 								}
 							});
-
-
-
-
-
-
-
-							// let htmlString = '<ul>';
-
-							// for (let file of data) {
-							// 	htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
-							// }
-
-							// htmlString += '</ul>';
-							// document.getElementsByTagName('body')[0].innerHTML = htmlString;
 						})()
-
-						// fetch(folderPath)
-						// 	.then(response => response.text())
-						// 	.then(data => {
-						// 		console.log(data);
-
-						// 		var parser = new DOMParser();
-						// 		var htmlDoc = parser.parseFromString(data, 'text/html');
-						// 		var fileElements = htmlDoc.querySelectorAll('a');
-						// 		console.log(fileElements);
-
-						// 		fileElements.forEach(function (fileElement) {
-						// 			var fileName = fileElement.getAttribute('href');
-						// 			if (fileName && isImageFile(fileName)) {
-						// 				var img = new Image();
-						// 				img.src = fileName;
-						// 				img.alt = fileName;
-						// 				container.appendChild(img);
-						// 			}
-						// 		});
-						// 	})
-						// 	.catch(error => console.error(error));
 					}
 
 					displayImagesFromFolderInRow("line_scan_calibration");
-
 					displayImagesFromFolderInRow("multi_modal_non-isotropic_light_source");
 
 				</script>
-
-
-				<!-- <p>Some text here</p>
-							<a href="#">Link</a> -->
-
 
 				<footer class="major">
 					<ul class="actions special">
