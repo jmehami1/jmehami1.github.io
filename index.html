@@ -81,18 +81,68 @@
 			<section id="projects" class="main special">
 				<header class="major">
 					<h2>Projects</h2>
+					<script>
+						function displayImagesFromFolderInRow(containerId) {
+							// This function will load all images that are contained in a local file and add them as image attributes to the publication container.
+							var container = document.getElementById(containerId);
+							var folderPath = "https://api.github.com/repos/jmehami1/jmehami1.github.io/contents/images/projects/" + container.id;
+
+							function isImageFile(fileName) {
+								const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+								const fileExtension = fileName.toLowerCase().split('.').pop();
+
+								return imageExtensions.includes(fileExtension);
+							}
+
+							(async () => {
+								const response = await fetch(folderPath);
+								const data = await response.json();
+								data.forEach(function (fileElement) {
+
+									var filePath = fileElement.path;
+									var fileDownloadUrl = fileElement.download_url;
+
+									if (isImageFile(filePath)) {
+										var img = new Image();
+										img.src = fileDownloadUrl;
+										img.alt = filePath;
+										container.appendChild(img);
+									}
+								});
+							})()
+						}
+					</script>
 				</header>
 
-				<div class="project">
-					<h3>Line-scan frame camera calibration</h3>
-					<p style="text-align: left;">
-						description
-						approach
-						results
+				<div class="project" id="line_scan_frame_camera_calibration">
+					<h3>Line-scan Frame Camera Calibration</h3>
+					<p>
+						<u><strong>Summary</strong></u> I was required to calibrate a line-scan hyperspectral camera to
+						use for robotic applications. The difficulty with calibrating this camera is the single spatial
+						dimension. I successfully implemented the calibration by using an additional 2D color camera
+						where the cameras were modelled according to the <a
+							href="https://en.wikipedia.org/wiki/Pinhole_camera_model">pinhole
+							camera model</a>. This calibration incorporated uncertainty
+						estimation due to pixel noise, which was later used to create a novel active calibration
+						algorithm (<a href="#pub_observability_line_scan_calibration">see below</a>).
+						This work has since been updated to use OpenCV's <a
+							href="https://docs.opencv.org/4.x/db/da9/tutorial_aruco_board_detection.html">ArUco
+							board</a> for automatic pose estimation of the calibration board.
+
+						<br><br>
+
+						<u><strong>Results</strong></u> The calibration made it possible to reproject line-scan images to color images. The active calibration algorithm reduced the error in the calibration
+						parameters by 26% while using fewer images when compared to a naive approach that used all
+						images.
 					</p>
 					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3>
-					<div class="imagerow" id="line"></div>
+
+					<div class="imagerow" id="line_scan_frame_camera_calibration">
+						<script>
+							displayImagesFromFolderInRow("line_scan_frame_camera_calibration");
+						</script>
+					</div>
 				</div>
 
 
@@ -133,22 +183,22 @@
 							// This function will load all images that are contained in a local file and add them as image attributes to the publication container.
 							var container = document.getElementById(containerId);
 							var folderPath = "https://api.github.com/repos/jmehami1/jmehami1.github.io/contents/images/publications/" + container.id;
-	
+
 							function isImageFile(fileName) {
 								const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 								const fileExtension = fileName.toLowerCase().split('.').pop();
-	
+
 								return imageExtensions.includes(fileExtension);
 							}
-	
+
 							(async () => {
 								const response = await fetch(folderPath);
 								const data = await response.json();
 								data.forEach(function (fileElement) {
-	
+
 									var filePath = fileElement.path;
 									var fileDownloadUrl = fileElement.download_url;
-	
+
 									if (isImageFile(filePath)) {
 										var img = new Image();
 										img.src = fileDownloadUrl;
@@ -198,7 +248,7 @@
 					</p>
 					<!-- <h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3> -->
-					<div class="imagerow" id="subcutaneous_fat_depth_regression" >
+					<div class="imagerow" id="subcutaneous_fat_depth_regression">
 						<script>
 							displayImagesFromFolderInRow("subcutaneous_fat_depth_regression");
 						</script>
@@ -235,7 +285,7 @@
 
 				</div>
 
-				<div class="publication">
+				<div class="publication" id="pub_observability_line_scan_calibration">
 					<h2><a href="https://doi.org/10.1109/MFI49285.2020.9235226" target="_blank">Observability driven
 							multi-modal line-scan camera calibration</a></h2>
 					<p style="text-align: left;">
@@ -246,7 +296,7 @@
 					</p>
 					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3>
-					<div class="imagerow" id="observability_line_scan_calibration" >
+					<div class="imagerow" id="observability_line_scan_calibration">
 						<script>
 							displayImagesFromFolderInRow("observability_line_scan_calibration");
 						</script>
@@ -255,7 +305,8 @@
 
 				<footer class="major">
 					<ul class="actions special">
-						<li><a href="https://scholar.google.com/citations?user=j3bTQ84AAAAJ&hl=en&oi=ao" class="button" target="_blank">More Details</a></li>
+						<li><a href="https://scholar.google.com/citations?user=j3bTQ84AAAAJ&hl=en&oi=ao" class="button"
+								target="_blank">More Details</a></li>
 					</ul>
 				</footer>
 			</section>

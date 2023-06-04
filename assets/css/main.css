@@ -2864,7 +2864,7 @@ input, select, textarea {
 	/* Publication */
 	.project {
 		/* background-color: ; */
-		padding: 1%;
+		/* padding: 1%; */
 		/* border: 1px solid #ccc; */
 		/* margin-bottom: 1%; */
 		position: relative;
@@ -2889,8 +2889,13 @@ input, select, textarea {
 		}
 		
 		.project h3{
+			text-align: center;
+		}
+
+		.project p{
 			text-align: left;
 		}
+
 	
 	.project .imagerow {
 		display: grid;
