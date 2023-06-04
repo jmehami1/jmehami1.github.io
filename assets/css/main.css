@@ -2863,17 +2863,17 @@ input, select, textarea {
 
 	/* Publication */
 	.project {
-		/* background-color: ; */
-		/* padding: 1%; */
-		/* border: 1px solid #ccc; */
-		/* margin-bottom: 1%; */
+		/* background-color: ;
+		padding: 1%;
+		border: 1px solid #ccc;
+		margin-bottom: 1%; */
 		position: relative;
 		/* display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 		grid-gap: 5%; */
 	}
 
-		.project::before,.project::after {
+		.project::before, .project::after {
 			content: "";
 			position: absolute;
 			left: 0;
@@ -2881,9 +2881,11 @@ input, select, textarea {
 			height: 1px;
 			background-color: black;
 		}
+
 		.project::before {
 			top: 0;
 		}
+		
 		.project::after {
 			bottom: 0;
 		}
@@ -2901,7 +2903,7 @@ input, select, textarea {
 		display: grid;
 		padding: 1%;
 		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-		grid-gap: 5%;
+		grid-gap: 1%;
 		align-items: center;
 	}
 
