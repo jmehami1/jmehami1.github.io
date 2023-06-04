@@ -80,9 +80,23 @@
 			<!-- First Section -->
 			<section id="projects" class="main special">
 				<header class="major">
-					<h2>Magna veroeros</h2>
+					<h2>Projects</h2>
 				</header>
-				<ul class="features">
+
+				<div class="project">
+					<h3>Line-scan frame camera calibration</h3>
+					<p style="text-align: left;">
+						description
+						approach
+						results
+					</p>
+					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
+							target="_blank"><strong>GitHub</strong></a></h3>
+					<div class="imagerow" id="line"></div>
+				</div>
+
+
+				<!-- <ul class="features">
 					<li>
 						<span class="icon solid major style1 fa-code"></span>
 						<h3>Ipsum consequat</h3>
@@ -101,7 +115,7 @@
 						<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed
 							consequat.</p>
 					</li>
-				</ul>
+				</ul> -->
 				<footer class="major">
 					<ul class="actions special">
 						<li><a href="generic.html" class="button">Learn More</a></li>
@@ -113,8 +127,40 @@
 			<section id="publications" class="main special">
 				<header class="major">
 					<h2>Publications</h2>
+
+					<script>
+						function displayImagesFromFolderInRow(containerId) {
+							// This function will load all images that are contained in a local file and add them as image attributes to the publication container.
+							var container = document.getElementById(containerId);
+							var folderPath = "https://api.github.com/repos/jmehami1/jmehami1.github.io/contents/images/publications/" + container.id;
+	
+							function isImageFile(fileName) {
+								const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+								const fileExtension = fileName.toLowerCase().split('.').pop();
+	
+								return imageExtensions.includes(fileExtension);
+							}
+	
+							(async () => {
+								const response = await fetch(folderPath);
+								const data = await response.json();
+								data.forEach(function (fileElement) {
+	
+									var filePath = fileElement.path;
+									var fileDownloadUrl = fileElement.download_url;
+	
+									if (isImageFile(filePath)) {
+										var img = new Image();
+										img.src = fileDownloadUrl;
+										img.alt = filePath;
+										container.appendChild(img);
+									}
+								});
+							})()
+						}
+					</script>
 				</header>
-				<ul class="statistics">
+				<!-- <ul class="statistics">
 					<li class="style1">
 						<span class="icon solid fa-code-branch"></span>
 						<strong>5,120</strong> Etiam
@@ -135,9 +181,7 @@
 						<span class="icon fa-gem"></span>
 						<strong>1,024</strong> Nullam
 					</li>
-				</ul>
-
-				<!-- <img src="http://127.0.0.1:5500/images/publications/line_scan_calibration/active_simulation_abs_error_norm.png" alt="TEST" /> -->
+				</ul> -->
 
 				<div class="publication">
 					<h2><a href="http://hdl.handle.net/10453/164273" target="_blank">Subcutaneous Fat Depth Regression
@@ -154,7 +198,11 @@
 					</p>
 					<!-- <h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3> -->
-					<div class="imagerow" id="subcutaneous_fat_depth_regression"></div>
+					<div class="imagerow" id="subcutaneous_fat_depth_regression" >
+						<script>
+							displayImagesFromFolderInRow("subcutaneous_fat_depth_regression");
+						</script>
+					</div>
 				</div>
 
 				<div class="publication">
@@ -174,8 +222,16 @@
 					</p>
 					<h3><a href="https://github.com/jmehami1/MMHS-RE" target="_blank"><strong>GitHub</strong></a></h3>
 
-					<div class="imagerow" id="multi_modal_non-isotropic_light_source"></div>
-					<div class="imagerow" id="multi_modal_non-isotropic_reflectance"></div>
+					<div class="imagerow" id="multi_modal_non-isotropic_light_source">
+						<script>
+							displayImagesFromFolderInRow("multi_modal_non-isotropic_light_source");
+						</script>
+					</div>
+					<div class="imagerow" id="multi_modal_non-isotropic_reflectance">
+						<script>
+							displayImagesFromFolderInRow("multi_modal_non-isotropic_reflectance");
+						</script>
+					</div>
 
 				</div>
 
@@ -190,50 +246,16 @@
 					</p>
 					<h3><a href="https://github.com/jmehami1/Line-scan_Frame_Camera_Calibration"
 							target="_blank"><strong>GitHub</strong></a></h3>
-					<div class="imagerow" id="line_scan_calibration"></div>
+					<div class="imagerow" id="observability_line_scan_calibration" >
+						<script>
+							displayImagesFromFolderInRow("observability_line_scan_calibration");
+						</script>
+					</div>
 				</div>
-
-				<script>
-					function displayImagesFromFolderInRow(containerId) {
-						// This function will load all images that are contained in a local file and add them as image attributes to the publication container.
-						var container = document.getElementById(containerId);
-						var folderPath = "https://api.github.com/repos/jmehami1/jmehami1.github.io/contents/images/publications/" + container.id;
-
-						function isImageFile(fileName) {
-							const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-							const fileExtension = fileName.toLowerCase().split('.').pop();
-
-							return imageExtensions.includes(fileExtension);
-						}
-
-						(async () => {
-							const response = await fetch(folderPath);
-							const data = await response.json();
-							data.forEach(function (fileElement) {
-
-								var filePath = fileElement.path;
-								var fileDownloadUrl = fileElement.download_url;
-
-								if (isImageFile(filePath)) {
-									var img = new Image();
-									img.src = fileDownloadUrl;
-									img.alt = filePath;
-									container.appendChild(img);
-								}
-							});
-						})()
-					}
-
-					displayImagesFromFolderInRow("line_scan_calibration");
-					displayImagesFromFolderInRow("multi_modal_non-isotropic_light_source");
-					displayImagesFromFolderInRow("multi_modal_non-isotropic_reflectance");
-					displayImagesFromFolderInRow("subcutaneous_fat_depth_regression");
-
-				</script>
 
 				<footer class="major">
 					<ul class="actions special">
-						<li><a href="generic.html" class="button">Learn More</a></li>
+						<li><a href="https://scholar.google.com/citations?user=j3bTQ84AAAAJ&hl=en&oi=ao" class="button" target="_blank">More Details</a></li>
 					</ul>
 				</footer>
 			</section>
