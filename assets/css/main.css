@@ -2880,6 +2880,7 @@ input, select, textarea {
 			right: 0;
 			height: 1px;
 			background-color: black;
+			z-index: 0;
 		}
 
 		.project::before {
@@ -2899,7 +2900,7 @@ input, select, textarea {
 		}
 
 	
-	.project .imagerow {
+	.project .imagerow{
 		display: grid;
 		padding: 1%;
 		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -2907,11 +2908,22 @@ input, select, textarea {
 		align-items: center;
 	}
 
-		.project .imagerow img {
+		.project .imagerow img{
 			width: 100%;
 			height: auto;
 			object-fit: contain;
+			transition: transform 0.3s; /* Add a smooth transition effect */
+			z-index: 1;
 		}
+
+		/* .project .imagerow img .enlarge-image {
+    		transition: transform 0.3s; 
+  		} */
+
+  		.project .imagerow img:hover{
+    		transform: scale(1.4); /* Increase the image size to 120% */
+			z-index: 2;
+  		}
 
 /* Publication */
 	.publication {
@@ -2936,7 +2948,14 @@ input, select, textarea {
 				width: 100%;
 				height: auto;
 				object-fit: contain;
+				transition: transform 0.3s; /* Add a smooth transition effect */
+				z-index: 1;
 			}
+
+			.publication .imagerow img:hover{
+				transform: scale(1.4); /* Increase the image size to 120% */
+				z-index: 2;
+			  }
 
 /* Statistics */
 
