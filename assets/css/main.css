@@ -2861,6 +2861,17 @@ input, select, textarea {
 
 		}
 
+		.icon-row {
+			display: flex;
+			justify-content: left;
+			align-items: center;
+		  }
+	  
+		  .icon-row img {
+			margin: 0 10px; /* Adjust the spacing between icons */
+			max-width: 60px; /* Adjust the size of the icons */
+		  }
+
 	/* Publication */
 	.project {
 		/* background-color: ; */
