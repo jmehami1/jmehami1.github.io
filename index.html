@@ -116,10 +116,10 @@
 
 
 				<div class="project">
-					<h3>Multi-Camera Extrinsic Calibration in ROS</h3>
+					<h2>Multi-Camera Extrinsic Calibration in ROS</h2>
 					<p>
 						<u><strong>Summary</strong></u> I was required to extrinsically calibrate 16 RGB-D cameras with
-						non-overlapping views that were setup in a ROS environment.
+						partial-overlapping views that were setup in a ROS environment.
 						I solved the calibration by creating a double-sided <a
 							href="https://docs.opencv.org/4.x/db/da9/tutorial_aruco_board_detection.html">ArUco
 							board</a> and solved the optimization as a pose graph using <a
@@ -130,8 +130,8 @@
 						<u><strong>Results</strong></u> Point cloud data from the cameras was used to create 3D
 						reconstructed models. My calibration approach reduced the error in the models by a factor 10
 						when compared the previous calibration method. The total calibration time, which includes
-						collecting the data and solving the calibration problem, was reduced by 90% when compared
-						to the previous method.
+						collecting the data and solving the calibration problem, was reduced by over 90% when compared
+						to the previous method that calibrated cameras pairwise.
 					</p>
 					<h3><a href="https://github.com/jmehami1/multicamera-calibration-ros"
 							target="_blank"><strong>GitHub</strong></a></h3>
@@ -141,10 +141,15 @@
 							displayImagesFromFolderInRow("multi_camera_calibration_top");
 						</script>
 					</div>
+					<div class="imagerow" id="multi_camera_calibration_bottom">
+						<script>
+							displayImagesFromFolderInRow("multi_camera_calibration_bottom");
+						</script>
+					</div>
 				</div>
 
 				<div class="project">
-					<h3>Line-scan Frame Camera Calibration</h3>
+					<h2>Line-scan Frame Camera Calibration</h2>
 					<p>
 						<u><strong>Summary</strong></u> I was required to calibrate a line-scan hyperspectral camera to
 						use for robotic applications. The difficulty with calibrating this camera is the single spatial
