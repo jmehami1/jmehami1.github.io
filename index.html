@@ -114,6 +114,67 @@
 					</script>
 				</header>
 
+				<div class="project">
+					<h2>Hyperspectral Deep Learning of Subcutaneous Fat Depth</h2>
+					<p>
+						<u><strong>Summary</strong></u> I modelled the depth of subcutaneous fat (in millimeters) on
+						lamb cuts using <a href="https://en.wikipedia.org/wiki/Hyperspectral_imaging"
+							target="_blank">hyperspectral imaging</a> through training CNN deep learning models. The
+						hyperspectral data was captured using a RGB-D and line-scan hyperspectral camera system where
+						the ground-truth fat depth data was acquired from CT scans. Effects due to the 3D shape of the
+						cuts and the illumination on their surfaces were first removed from the hyperspectral images,
+						which were then used to estimate the material property of reflectance. The estimated reflectance
+						was used to train the regression models. The distribution in fat depth was seen to be
+						imbalanced.
+
+						<br><br>
+
+						<u><strong>Results</strong></u> The CNN was compared to a multi-layer perceptron (MLP) and
+						linear regression models. The results for R2 and RMSE in Fat Depth are shown for all models in
+						the table below. The CNN demonstrated the best fit in fat depth. The maximum fat depth that can
+						be accurately estimated by hyperspectral camera was around 15mm.
+					<table>
+						<thead>
+							<tr>
+								<th>Model</th>
+								<th>R2</th>
+								<th>RMSE in Fat Depth (mm)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Linear Regression</td>
+								<td>0.65</td>
+								<td>1.78</td>
+							</tr>
+							<tr>
+								<td>MLP</td>
+								<td>0.73</td>
+								<td>1.57</td>
+							</tr>
+							<tr>
+								<td><strong>CNN</strong></td>
+								<td><strong>0.81</strong></td>
+								<td><strong>1.17</strong></td>
+							</tr>
+						</tbody>
+					</table>
+					</p>
+					<!-- <h3><a href="https://github.com/jmehami1/multicamera-calibration-ros"
+							target="_blank"><strong>GitHub</strong></a></h3> -->
+
+					<div class="imagerow" id="hyperspectral_deep_learning_fat_depth_top">
+						<script>
+							displayImagesFromFolderInRow("hyperspectral_deep_learning_fat_depth_top");
+						</script>
+					</div>
+					<div class="imagerow" id="hyperspectral_deep_learning_fat_depth_bottom">
+						<script>
+							displayImagesFromFolderInRow("hyperspectral_deep_learning_fat_depth_bottom");
+						</script>
+					</div>
+				</div>
+
 
 				<div class="project">
 					<h2>Multi-Camera Extrinsic Calibration in ROS</h2>
@@ -121,9 +182,10 @@
 						<u><strong>Summary</strong></u> I was required to extrinsically calibrate 16 RGB-D cameras with
 						partial-overlapping views that were setup in a ROS environment.
 						I solved the calibration by creating a double-sided <a
-							href="https://docs.opencv.org/4.x/db/da9/tutorial_aruco_board_detection.html">ArUco
+							href="https://docs.opencv.org/4.x/db/da9/tutorial_aruco_board_detection.html"
+							target="_blank">ArUco
 							board</a> and solved the optimization as a pose graph using <a
-							href="https://github.com/RainerKuemmerle/g2o">g2o solver</a>.
+							href="https://github.com/RainerKuemmerle/g2o" target="_blank">g2o solver</a>.
 
 						<br><br>
 
@@ -207,9 +269,9 @@
 					</li>
 				</ul> -->
 				<footer class="major">
-					<ul class="actions special">
+					<!-- <ul class="actions special">
 						<li><a href="generic.html" class="button">Learn More</a></li>
-					</ul>
+					</ul> -->
 				</footer>
 			</section>
 

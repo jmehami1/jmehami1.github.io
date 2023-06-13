@@ -2899,6 +2899,15 @@ input, select, textarea {
 			text-align: left;
 		}
 
+		.project  table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .project  th, td{
+            padding: 8px;
+            text-align: center;
+        }
+
 	
 	.project .imagerow{
 		display: grid;
