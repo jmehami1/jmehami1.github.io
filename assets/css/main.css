@@ -2871,6 +2871,28 @@ input, select, textarea {
 			margin: 0 10px; /* Adjust the spacing between icons */
 			max-width: 60px; /* Adjust the size of the icons */
 		  }
+	
+	.education{
+		padding: 1%;
+		display: flex;
+	}
+		.education h3{
+			text-align: center;
+		}
+
+		.education .column {
+			flex: 1;
+			padding: 10px;
+			align-items: center;
+			vertical-align: middle;
+		  }
+		  .education .column img{
+			max-width: 170px;
+		  }
+
+		  .education p{
+			line-height: -1;
+		  }
 
 	/* Publication */
 	.project {
