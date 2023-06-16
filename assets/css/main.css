@@ -3209,6 +3209,28 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+	/* expertise */
+	.expertise {
+		display:inline-flex;
+	}
+
+	.expertise ul {
+		list-style: circle;
+
+		/* list-style-type: circle; */
+		/* margin: 0; */
+		/* padding: ; */
+		/* overflow:auto; */
+	  }
+	  
+	.expertise li {
+		/* float: left; */
+		display: inline-block;
+		margin-right: 10px; /* add spacing between items */
+	  }
+
+
+
 /* Header */
 
 	#header {
