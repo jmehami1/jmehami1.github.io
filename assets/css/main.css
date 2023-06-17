@@ -3122,12 +3122,18 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-		.spotlight .content {
+		.spotlight .content .column{
 			-moz-flex: 1;
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
 		}
+			/* .spotlight .content {
+			-moz-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		} */
 
 			.spotlight .content > :last-child {
 				margin-bottom: 0;
