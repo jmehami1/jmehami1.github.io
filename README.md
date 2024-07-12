@@ -21,10 +21,10 @@ Credits:
 
 	Demo Images:
 		Unsplash (unsplash.com)
-
+	
 	Icons:
 		Font Awesome (fontawesome.io)
-
+	
 	Other:
 		jQuery (jquery.com)
 		Scrollex (github.com/ajlkn/jquery.scrollex)
@@ -55,3 +55,9 @@ When reviewing a website portfolio for a candidate applying for an intern positi
 10. Personal Touch: Including a personal statement or introduction can give a glimpse into the candidate's passion, motivation, and enthusiasm for computer vision, machine learning, and deep learning. It helps create a connection between the candidate and the recruiter.
 
 Remember, these are just key elements that I would typically look for in a portfolio. The specific requirements and preferences may vary depending on the company and the position.
+
+
+
+## TODO
+
+- Show slide show of images on mobile

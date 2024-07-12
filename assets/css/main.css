@@ -123,7 +123,7 @@ input, select, textarea {
 
 	body {
 		background-color: #935d8c;
-		color: rgba(255, 255, 255, 0.65);
+		color: rgba(255, 255, 255, 1.0);
 	}
 
 	body, input, select, textarea {
@@ -2257,6 +2257,11 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.fa:before {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+		}
+
 		.icon.major {
 			border: solid 1px;
 			display: inline-block;
@@ -2454,7 +2459,7 @@ input, select, textarea {
 				}
 
 	dl {
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 	}
 
 		dl dt {
@@ -2476,7 +2481,7 @@ input, select, textarea {
 		}
 
 		dl.alt dd {
-			margin: 0 0 0.85em 5.5em;
+			margin: 0 0 0 5.5em;
 		}
 
 		dl.alt:after {
@@ -2621,6 +2626,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		/* text-align: right; */
 	}
 
 		ul.icons li {
@@ -2863,19 +2869,41 @@ input, select, textarea {
 
 		.icon-row {
 			display: flex;
-			justify-content: left;
+			justify-content: center;
 			align-items: center;
+			flex-wrap: wrap; /* Allow wrapping on smaller screens */
 		  }
 	  
 		  .icon-row img {
 			margin: 0 10px; /* Adjust the spacing between icons */
 			max-width: 60px; /* Adjust the size of the icons */
 		  }
+
+		@media (max-width: 600px) {
+		.icon-row {
+			justify-content: center; /* Center the icons on small screens */
+		}
+		
+		.icon-row img {
+			max-width: 40px; /* Reduce the size of the icons on small screens */
+			margin: 5px; /* Reduce the spacing between icons on small screens */
+		}
+		}
 	
 	.education{
 		padding: 1%;
-		display: flex;
+		background-color: #f1f1f1;
+		border: 1px solid #ccc;
 	}
+
+		.education .columns {
+			display: flex;
+      		justify-content: space-between;
+      		align-items: center;
+      		flex-wrap: wrap;
+      		margin-bottom: 20px;
+		}
+
 		.education h3{
 			text-align: center;
 		}
@@ -2886,13 +2914,39 @@ input, select, textarea {
 			align-items: center;
 			vertical-align: middle;
 		  }
-		  .education .column img{
+
+		.education .column img{
 			max-width: 170px;
+		}
+
+		.education img{
+			max-width: 200px;
+		}
+
+		.education p{
+			flex-basis: 100%; /* Ensure it takes the full width */
+			margin-top: 20px; /* Space above the paragraph */
+		}
+
+		.education .university{
+            margin: 0;
+            padding: 0;
+		}
+
+		.education .year{
+			padding-top: 10px;
+		}
+
+		.spacer {
+			width: 100%; /* Ensure the spacer takes the full width */
+			height: 20px; /* Height of the blank space */
 		  }
 
-		  .education p{
-			line-height: -1;
-		  }
+		@media (max-width: 600px) {
+		.education img{
+			max-width: 100px;
+			}
+		}
 
 	/* Publication */
 	.project {
@@ -3868,6 +3922,39 @@ input, select, textarea {
 			margin-left: 2em;
 		}
 
+		#footer h2 {
+			width: 100%;
+			/* margin: 2.5em 0 2em 0;
+			font-size: 0.8em; */
+			text-align: center;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin: 0;
+		}
+
+		#footer ul.icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+			text-align: center;
+		}
+
+		/* #footer dl.alt {
+			padding: 0;
+			margin: 0;
+		} */
+
+		@media screen and (max-width: 736px) {
+
+			#footer dl{
+				padding: 3em 2em 1em 2em ;
+				justify-content: center;
+				text-align: center;
+			}
+
+		}
+
+
 		#footer .copyright {
 			width: 100%;
 			margin: 2.5em 0 2em 0;
@@ -3896,10 +3983,6 @@ input, select, textarea {
 					width: 100%;
 					margin-left: 0;
 					margin-bottom: 3em;
-				}
-
-				#footer .copyright {
-					text-align: left;
 				}
 
 		}
