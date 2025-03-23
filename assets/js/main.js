@@ -121,3 +121,16 @@
 		});
 
 })(jQuery);
+
+function toggleNav() {
+    var nav = document.getElementById('nav');
+    nav.classList.toggle('show');
+}
+
+document.addEventListener('click', function(event) {
+    var nav = document.getElementById('nav');
+    var navButton = document.getElementById('nav-button');
+    if (!nav.contains(event.target) && !navButton.contains(event.target)) {
+        nav.classList.remove('show');
+    }
+});

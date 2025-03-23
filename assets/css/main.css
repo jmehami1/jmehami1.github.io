@@ -2462,7 +2462,7 @@ input, select, textarea {
 		margin: 0 0 0 0;
 	}
 
-		dl dt {
+		dl.dt {
 			display: block;
 			font-weight: 400;
 			margin: 0 0 1em 0;
@@ -2524,10 +2524,6 @@ input, select, textarea {
 			width: 100%;
 			margin-left: 0;
 		}
-
-			ul.actions.special li:first-child {
-				padding-left: 0;
-			}
 
 		ul.actions.stacked {
 			-moz-flex-direction: column;
@@ -2892,7 +2888,7 @@ input, select, textarea {
 	
 	.education{
 		padding: 1%;
-		background-color: #f1f1f1;
+		background-color: #5c5c5c;
 		border: 1px solid #ccc;
 	}
 
@@ -2950,7 +2946,7 @@ input, select, textarea {
 
 	/* Publication */
 	.project {
-		/* background-color: ; */
+		background-color: #5c5c5c;
 		padding: 1%;
 		/* border: 1px solid #ccc; */
 		/* margin-bottom: 1%; */
@@ -3023,7 +3019,7 @@ input, select, textarea {
 
 /* Publication */
 	.publication {
-		background-color: #f1f1f1;
+		background-color: #5c5c5c;
 		padding: 3%;
 		border: 1px solid #ccc;
 		margin-bottom: 1%;
@@ -3432,149 +3428,271 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
-		-moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
-		color: #636363;
-		position: absolute;
-		width: 64em;
-		max-width: calc(100% - 4em);
-		padding: 1em;
-		background-color: #f7f7f7;
-		border-top-left-radius: 0.25em;
-		border-top-right-radius: 0.25em;
-		cursor: default;
-		text-align: center;
-	}
+#nav {
+    -moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
+    -webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
+    -ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
+    transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
+    color: #ffffff; /* Set text color to white */
+    position: absolute;
+    width: 90em; /* Match the width of the #wrapper */
+    max-width: calc(100% - 2em); /* Match the max-width of the #wrapper */
+    padding: 1em;
+    background-color: #5c5c5c;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    cursor: default;
+    text-align: center;
+}
 
-		#nav input, #nav select, #nav textarea {
-			color: #636363;
-		}
+#nav input, #nav select, #nav textarea {
+    color: #ffffff; /* Set text color to white */
+}
 
-		#nav a:hover {
-			color: #636363;
-		}
+#nav a {
+    color: #ffffff; /* Set link color to white */
+}
 
-		#nav strong, #nav b {
-			color: #636363;
-		}
+#nav a:hover {
+    color: #cccccc; /* Light gray color for hovered links */
+}
 
-		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
-			color: #636363;
-		}
+#nav strong, #nav b {
+    color: #ffffff; /* Set bold text color to white */
+}
 
-		#nav blockquote {
-			border-left-color: #dddddd;
-		}
+#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
+    color: #ffffff; /* Set heading color to white */
+}
 
-		#nav code {
-			background: rgba(222, 222, 222, 0.25);
-			border-color: #dddddd;
-		}
+#nav blockquote {
+    border-left-color: #dddddd;
+}
 
-		#nav hr {
-			border-bottom-color: #dddddd;
-		}
+#nav code {
+    background: rgba(222, 222, 222, 0.25);
+    border-color: #dddddd;
+}
 
-		#nav + #main {
-			padding-top: 4.25em;
-		}
+#nav hr {
+    border-bottom-color: #dddddd;
+}
 
-		#nav ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
+#nav + #main {
+    padding-top: 4.25em;
+}
 
-			#nav ul li {
-				-moz-transition: margin 0.2s ease;
-				-webkit-transition: margin 0.2s ease;
-				-ms-transition: margin 0.2s ease;
-				transition: margin 0.2s ease;
-				display: inline-block;
-				margin: 0 0.35em;
-				padding: 0;
-				vertical-align: middle;
-			}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-				#nav ul li a {
-					-moz-transition: font-size 0.2s ease;
-					-webkit-transition: font-size 0.2s ease;
-					-ms-transition: font-size 0.2s ease;
-					transition: font-size 0.2s ease;
-					display: inline-block;
-					height: 2.25em;
-					line-height: 2.25em;
-					padding: 0 1.25em;
-					border: 0;
-					border-radius: 8px;
-					box-shadow: inset 0 0 0 1px transparent;
-				}
+#nav ul li {
+    -moz-transition: margin 0.2s ease;
+    -webkit-transition: margin 0.2s ease;
+    -ms-transition: margin 0.2s ease;
+    transition: margin 0.2s ease;
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0;
+    vertical-align: middle;
+}
 
-					#nav ul li a:hover {
-						background-color: rgba(222, 222, 222, 0.25);
-					}
+#nav ul li a {
+    -moz-transition: font-size 0.2s ease;
+    -webkit-transition: font-size 0.2s ease;
+    -ms-transition: font-size 0.2s ease;
+    transition: font-size 0.2s ease;
+    display: inline-block;
+    height: 2.25em;
+    line-height: 2.25em;
+    padding: 0 1.25em;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px transparent;
+    color: #ffffff; /* Set link color to white */
+	font-size: 1.5em;
+	text-decoration: none;
+	font-weight: 400;
+}
 
-					#nav ul li a.active {
-						background-color: #ffffff;
-						box-shadow: none;
-					}
+#nav ul li a:hover {
+    background-color: rgba(222, 222, 222, 0.25);
+}
 
-		#nav.alt {
-			position: fixed;
-			top: 0;
-			padding: 0.5em 1em;
-			background-color: rgba(247, 247, 247, 0.95);
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-			z-index: 10000;
-		}
+#nav ul li a.active {
+    background-color: #ffffff;
+    box-shadow: none;
+    color: #5c5c5c; /* Set active link color to match background */
+}
 
-			#nav.alt ul li {
-				margin: 0 0.175em;
-			}
+#nav.alt {
+    position: fixed;
+    top: 0;
+    padding: 0.5em 1em;
+    background-color: #5c5c5c;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 10000;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-weight: 400;
+}
 
-				#nav.alt ul li a {
-					font-size: 0.9em;
-				}
+#nav.alt ul li {
+    margin: 0 0.175em;
+}
 
-		@media screen and (max-width: 736px) {
+#nav.alt ul li a {
+    font-size: 0.9em;
+}
 
-			#nav {
-				display: none;
-			}
+@media screen and (max-width: 736px) {
+    #nav {
+        display: none;
+    }
 
-				#nav + #main {
-					padding-top: 0;
-				}
+    #nav + #main {
+        padding-top: 0;
+    }
+}
 
-		}
+/* Navigation Button */
+#nav-button {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0.5em;
+    background-color: #1a1a1a;
+    border-radius: 0.25em;
+    text-align: start;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    z-index: 10001;
+}
+
+/* Hide the navigation bar on mobile screens */
+@media screen and (max-width: 736px) {
+    #nav {
+        display: none;
+    }
+
+    #nav-button {
+        display: block;
+    }
+}
+
+/* Show the navigation menu when the button is clicked */
+#nav.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    background-color:#5c5c5c;
+    z-index: 10000;
+    padding: 0.5em;
+    overflow-y: auto;
+}
+
+#nav.show ul {
+    display: block;
+    text-align: center; /* Ensure text is left-aligned */
+}
+
+#nav.show ul li {
+    display: block;
+    margin: 0.5em 0;
+}
+
+#nav.show ul li a {
+    display: block;
+    text-align: center; /* Ensure text is left-aligned */
+    padding: 0.5em 1em; /* Add padding for better spacing */
+}
 
 /* Main */
 
 	#main {
-		background-color: #ffffff;
-		color: #636363;
+		background-color: #1a1a1a; /* Dark background color */
+		color: #ffffff; /* White text color */
 		border-radius: 0.25em;
+		padding: 2em;
 	}
 
+		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+			color: #ffffff; /* White text color for headings */
+		}
+
+		#main p {
+			color: #ffffff; /* White text color for paragraphs */
+		}
+
+		#main a {
+			color: #ffffff; /* White text color for links */
+		}
+
+			#main a:hover {
+				color: #cccccc; /* Light gray color for hovered links */
+			}
+
+		#main blockquote {
+			color: #ffffff; /* White text color for blockquotes */
+			border-left-color: #cccccc; /* Light gray border color for blockquotes */
+		}
+
+		#main code {
+			background: rgba(255, 255, 255, 0.1); /* Light background for code blocks */
+			color: #ffffff; /* White text color for code blocks */
+			border-color: #cccccc; /* Light gray border color for code blocks */
+		}
+
+		#main hr {
+			border-bottom-color: #cccccc; /* Light gray color for horizontal rules */
+		}
+
+		#main .box {
+			background-color: #333333; /* Darker background for boxes */
+			color: #ffffff; /* White text color for boxes */
+			border-color: #444444; /* Darker border color for boxes */
+		}
+
+		#main input[type="submit"],
+		#main input[type="reset"],
+		#main input[type="button"],
+		#main button,
+		#main .button {
+			color: #ffffff !important; /* White text color for buttons */
+			background-color: #444444; /* Dark background color for buttons */
+			border-color: #555555; /* Darker border color for buttons */
+		}
+
+			#main input[type="submit"]:hover,
+			#main input[type="reset"]:hover,
+			#main input[type="button"]:hover,
+			#main button:hover,
+			#main .button:hover {
+				background-color: #555555; /* Lighter background color for hovered buttons */
+				border-color: #666666; /* Lighter border color for hovered buttons */
+			}
+
 		#main input, #main select, #main textarea {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main a:hover {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+			color: #ffffff;
 		}
 
 		#main blockquote {
@@ -3601,7 +3719,7 @@ input, select, textarea {
 		#main .button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #636363 !important;
+			color: #ffffff !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -4014,15 +4132,15 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 64em;
-		max-width: calc(100% - 4em);
+		width: 90em;
+		max-width: calc(100% - 2em);
 		margin: 0 auto;
 	}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				max-width: calc(100% - 2em);
+				max-width: 100%;
 			}
 
 		}
